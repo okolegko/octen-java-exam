@@ -6,7 +6,7 @@
 
 ---
 
-## Технології
+## Технології 
 - Java 17
 - Spring Boot
 - Spring Security + JWT
