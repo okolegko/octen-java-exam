@@ -16,4 +16,7 @@ public class CurrencyService {
     // Повертає курс конкретної валюти
     public double getRate(String currency) {
         Optional<CurrencyRate> rate = currencyRateRepository.findByCurrency(currency.toUpperCase());
-        return rate.map(CurrencyRate::getRate).
+        return rate.map(CurrencyRate::getRate);
+    }
+
+}
