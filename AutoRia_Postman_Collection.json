@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "AutoRia Clone API",
+    "_postman_id": "12345678-1234-5678-9012-abcdefabcdef",
+    "description": "Колекція запитів до API: реєстрація, логін, створення оголошень, перегляд статистики.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "🔐 Реєстрація користувача",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"user1\",\n  \"password\": \"password\",\n  \"premium\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "🔑 Авторизація з JWT",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"user1\",\n  \"password\": \"password\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "🚘 Створення оголошення",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"brand\": \"BMW\",\n  \"model\": \"X5\",\n  \"description\": \"Продається авто у гарному стані\",\n  \"currency\": \"USD\",\n  \"price\": 15000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/listings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["listings"]
+        }
+      }
+    },
+    {
+      "name": "📊 Перегляд статистики (для преміум)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/listings/1/statistics",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["listings", "1", "statistics"]
+        }
+      }
+    }
+  ]
+}
