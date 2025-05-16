@@ -1,10 +1,10 @@
 package com.autoria.util;
 
-import octen.java.exam.dto.ListingRequest;
-import octen.java.exam.model.Brand;
-import octen.java.exam.model.Listing;
-import octen.java.exam.model.Model;
-import octen.java.exam.model.User;
+import octen.java.com.autoria.dto.ListingRequest;
+import octen.java.com.autoria.model.Brand;
+import octen.java.com.autoria.model.Listing;
+import octen.java.com.autoria.model.Model;
+import octen.java.com.autoria.model.User;
 
 public class ListingMapper {
 

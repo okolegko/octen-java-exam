@@ -1,8 +1,8 @@
 package com.autoria.service;
 
 import lombok.RequiredArgsConstructor;
-import octen.java.exam.model.CurrencyRate;
-import octen.java.exam.repository.CurrencyRateRepository;
+import octen.java.com.autoria.model.CurrencyRate;
+import octen.java.com.autoria.repository.CurrencyRateRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

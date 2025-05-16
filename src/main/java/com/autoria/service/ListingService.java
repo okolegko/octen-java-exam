@@ -1,8 +1,8 @@
 package com.autoria.service;
 
 import lombok.RequiredArgsConstructor;
-import octen.java.exam.model.Listing;
-import octen.java.exam.repository.ListingRepository;
+import octen.java.com.autoria.model.Listing;
+import octen.java.com.autoria.repository.ListingRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
